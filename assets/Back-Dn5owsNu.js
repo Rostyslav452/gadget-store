@@ -1,0 +1,1 @@
+import{j as s,c as _,a as n}from"./index-CMAXT-0K.js";const e="_back_sgepy_14",t="_back__link_sgepy_30",a={back:e,back__link:t},l=({backLink:c,className:k})=>s.jsx("div",{className:_(a.back,k),children:s.jsx(n,{className:a.back__link,to:c,children:"Back"})});export{l as B};

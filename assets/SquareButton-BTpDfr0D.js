@@ -1,0 +1,1 @@
+import{c as b,j as r}from"./index-CMAXT-0K.js";const u="_btn_190ct_14",t={btn:u,"btn--active":"_btn--active_190ct_35"},i=({children:s,disabled:n,selected:c,className:a,...e})=>{const o=b(t.btn,{[t["btn--active"]]:c},a);return r.jsx("button",{type:"button",className:o,disabled:n,...e,children:s})};export{i as S};

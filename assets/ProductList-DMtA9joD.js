@@ -1,0 +1,1 @@
+import{j as t}from"./index-CMAXT-0K.js";import{a as o}from"./ProductCard-DnrWe6e6.js";const i={"product-list":"_product-list_l5aa2_1","product-list__item":"_product-list__item_l5aa2_6"},d=({products:r})=>t.jsx("div",{className:i["product-list"],children:r.map(s=>t.jsx("div",{className:i["product-list__item"],children:t.jsx(o,{product:s})},s.id))});export{d as P};
