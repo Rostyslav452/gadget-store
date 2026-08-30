@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './Breadcrumbs.module.scss';
 import { BreadcrumbLink } from './types';
-import { getImageUrl } from '../../utils/getImageUrl';
+import homeIcon from '../../../../assets/icons/home.svg';
 
 interface Props {
   links: BreadcrumbLink[];
@@ -13,7 +13,7 @@ export const Breadcrumbs: React.FC<Props> = ({ links }) => {
       <ol className={styles.breadcrumbs__list}>
         <li className={styles.breadcrumbs__item} key={'Home'}>
           <Link to={'/'} className={styles.breadcrumbs__link}>
-            <img src={getImageUrl('/icons/home.svg')} alt="Home" />
+            <img src={homeIcon} alt="Home" />
           </Link>
         </li>
 

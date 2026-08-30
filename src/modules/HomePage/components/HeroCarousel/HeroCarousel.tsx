@@ -7,7 +7,8 @@ import { IconButton } from '../../../shared/components/IconButton';
 import { ProgressivePicture } from '../../../shared/components/ProgressivePicture';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
-import { getImageUrl } from '../../../shared/utils/getImageUrl';
+import arrowLeftIcon from '../../../../assets/icons/arrow-left.svg';
+import arrowRightIcon from '../../../../assets/icons/arrow-right.svg';
 import { useNavigate } from 'react-router-dom';
 
 interface Props {
@@ -56,12 +57,7 @@ export const HeroCarousel: React.FC<Props> = ({ images: cards }) => {
           onClick={scrollPrev}
           className={styles['carousel__main-arrows']}
         >
-          <img
-            src={getImageUrl('/icons/arrow-left.svg')}
-            alt="Previous"
-            width="6"
-            height="10"
-          />
+          <img src={arrowLeftIcon} alt="Previous" width="6" height="10" />
         </IconButton>
 
         <div className={styles.carousel__wrapper} ref={emblaRef}>
@@ -93,12 +89,7 @@ export const HeroCarousel: React.FC<Props> = ({ images: cards }) => {
           onClick={scrollNext}
           className={styles['carousel__main-arrows']}
         >
-          <img
-            src={getImageUrl('/icons/arrow-right.svg')}
-            alt="Next"
-            width="6"
-            height="10"
-          />
+          <img src={arrowRightIcon} alt="Next" width="6" height="10" />
         </IconButton>
       </div>
 

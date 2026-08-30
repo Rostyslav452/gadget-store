@@ -2,7 +2,8 @@ import styles from './Footer.module.scss';
 import { Link } from 'react-router-dom';
 import { IconButton } from '../../../../components/IconButton';
 import { useCallback } from 'react';
-import { getImageUrl } from '../../../../utils/getImageUrl';
+import logoIcon from '../../../../../../assets/icons/logo.png';
+import arrowTopIcon from '../../../../../../assets/icons/arrow-top.svg';
 
 export const Footer = () => {
   const scrollToTop = useCallback(() => {
@@ -13,7 +14,7 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <Link to={'/'}>
         <img
-          src={getImageUrl('/icons/logo.png')}
+          src={logoIcon}
           alt="Nice Device Logo"
           className={styles.footer__logo}
           width="64"
@@ -49,12 +50,7 @@ export const Footer = () => {
       <div className={styles.footer__button}>
         <span className={styles.text}>Back to top</span>
         <IconButton aria-label={`Scroll to top`} onClick={scrollToTop}>
-          <img
-            src={getImageUrl('/icons/arrow-top.svg')}
-            alt=""
-            width="16"
-            height="16"
-          />
+          <img src={arrowTopIcon} alt="" width="16" height="16" />
         </IconButton>
       </div>
     </footer>

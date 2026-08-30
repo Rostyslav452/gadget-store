@@ -3,7 +3,8 @@ import styles from './ProductSection.module.scss';
 import { IconButton } from '../IconButton';
 import { ProductSlider } from './components/ProductSlider';
 import { Product } from '../../types/Product';
-import { getImageUrl } from '../../utils/getImageUrl';
+import arrowLeftIcon from '../../../../assets/icons/arrow-left.svg';
+import arrowRightIcon from '../../../../assets/icons/arrow-right.svg';
 import useEmblaCarousel from 'embla-carousel-react';
 
 interface Props {
@@ -57,24 +58,14 @@ export const ProductsSection: React.FC<Props> = ({ title, products }) => {
             disabled={prevBtnDisabled}
             onClick={scrollPrev}
           >
-            <img
-              src={getImageUrl('/icons/arrow-left.svg')}
-              alt="Previous"
-              width="6"
-              height="10"
-            />
+            <img src={arrowLeftIcon} alt="Previous" width="6" height="10" />
           </IconButton>
           <IconButton
             aria-label={`To next card`}
             disabled={nextBtnDisabled}
             onClick={scrollNext}
           >
-            <img
-              src={getImageUrl('/icons/arrow-right.svg')}
-              alt="Next"
-              width="6"
-              height="10"
-            />
+            <img src={arrowRightIcon} alt="Next" width="6" height="10" />
           </IconButton>
         </div>
       </div>

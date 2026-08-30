@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import styles from './FavoriteButton.module.scss';
-import { getImageUrl } from '../../utils/getImageUrl';
+import activeHeartIcon from '../../../../assets/icons/active-heart.svg';
+import heartIcon from '../../../../assets/icons/heart.svg';
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   selected?: boolean;
@@ -28,19 +29,9 @@ export const FavoriteButton: React.FC<Props> = ({
       aria-label={selected ? 'Remove from favorites' : 'Add to favorites'}
     >
       {selected ? (
-        <img
-          src={getImageUrl('/icons/active-heart.svg')}
-          alt=""
-          width="16"
-          height="14"
-        />
+        <img src={activeHeartIcon} alt="" width="16" height="14" />
       ) : (
-        <img
-          src={getImageUrl('/icons/heart.svg')}
-          alt=""
-          width="16"
-          height="14"
-        />
+        <img src={heartIcon} alt="" width="16" height="14" />
       )}
     </button>
   );

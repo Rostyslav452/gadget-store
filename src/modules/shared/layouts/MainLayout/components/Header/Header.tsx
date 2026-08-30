@@ -4,7 +4,8 @@ import { NavMenu } from './components/NavMenu';
 import { HeaderActions } from './components/HeaderActions';
 import { useState } from 'react';
 import { MobileMenu } from './components/MobileMenu';
-import { getImageUrl } from '../../../../utils/getImageUrl';
+import logoIcon from '../../../../../../assets/icons/logo.png';
+import menuIcon from '../../../../../../assets/icons/Menu.svg';
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ export const Header = () => {
     <header className={styles.header}>
       <Link to={'/'} className={styles.header__logo}>
         <img
-          src={getImageUrl('/icons/logo.png')}
+          src={logoIcon}
           alt="Nice Device Logo"
           className={styles['header__logo-image']}
           width="64"
@@ -26,12 +27,7 @@ export const Header = () => {
           onClick={() => setIsMobileMenuOpen(true)}
           aria-expanded={isMobileMenuOpen}
         >
-          <img
-            src={getImageUrl('/icons/Menu.svg')}
-            alt="Menu Icon"
-            width="16"
-            height="16"
-          />
+          <img src={menuIcon} alt="Menu Icon" width="16" height="16" />
         </button>
 
         <NavMenu />

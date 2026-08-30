@@ -1,0 +1,8 @@
+@use './modules/shared/styles/mixins' as m;
+
+.app__loader {
+  height: 100vh;
+  flex: 1;
+
+  @include m.flex(row, 0, center, center);
+}

@@ -3,6 +3,7 @@ import { App } from './App';
 import { HashRouter } from 'react-router-dom';
 import { CartProvider } from './modules/shared/store/CartContext';
 import { FavoritesProvider } from './modules/shared/store/FavoritesContext';
+import './index.css';
 
 createRoot(document.getElementById('root') as HTMLElement).render(
   <CartProvider>

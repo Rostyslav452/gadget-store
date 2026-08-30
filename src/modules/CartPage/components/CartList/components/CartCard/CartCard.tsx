@@ -4,8 +4,11 @@ import {
   CartItem,
   useCartDispatch,
 } from '../../../../../shared/store/CartContext';
-import { getImageUrl } from '../../../../../shared/utils/getImageUrl';
+import crossIcon from '../../../../../../assets/icons/cross.svg';
+import minusIcon from '../../../../../../assets/icons/minus.svg';
+import plusIcon from '../../../../../../assets/icons/plus.svg';
 import styles from './CartCard.module.scss';
+import { getImageUrl } from '../../../../../shared/utils/getImageUrl';
 
 interface Props {
   item: CartItem;
@@ -21,12 +24,7 @@ export const CartCard: React.FC<Props> = ({ item }) => {
         onClick={() => dispatch({ type: 'deleteProduct', productId: itemId })}
         className={styles['cart-card__delete']}
       >
-        <img
-          src={getImageUrl('/icons/cross.svg')}
-          alt={'delete item'}
-          width="10"
-          height="10"
-        />
+        <img src={crossIcon} alt={'delete item'} width="10" height="10" />
       </button>
 
       <img
@@ -47,12 +45,7 @@ export const CartCard: React.FC<Props> = ({ item }) => {
           }
           disabled={item.quantity === 1}
         >
-          <img
-            src={getImageUrl('/icons/minus.svg')}
-            alt={'decrease quantity'}
-            width="11"
-            height="2"
-          />
+          <img src={minusIcon} alt={'decrease quantity'} width="11" height="2" />
         </IconButton>
 
         <span>{item.quantity}</span>
@@ -63,12 +56,7 @@ export const CartCard: React.FC<Props> = ({ item }) => {
             dispatch({ type: 'incrementQuantity', productId: itemId })
           }
         >
-          <img
-            src={getImageUrl('/icons/plus.svg')}
-            alt={'increase quantity'}
-            width="11"
-            height="11"
-          />
+          <img src={plusIcon} alt={'increase quantity'} width="11" height="11" />
         </IconButton>
       </div>
 

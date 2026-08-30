@@ -42,7 +42,7 @@ export const useHomePageData = () => {
 
       try {
         const response = await fetch(
-          `${import.meta.env.BASE_URL}api/products.json`,
+          `${import.meta.env.BASE_URL}/api/products.json`,
         );
 
         if (!response.ok) {

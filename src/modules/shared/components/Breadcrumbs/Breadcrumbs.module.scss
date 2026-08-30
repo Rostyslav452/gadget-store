@@ -21,7 +21,7 @@
       margin-inline: 8px;
 
       background-color: v.$color-secondary;
-      mask-image: url('/icons/arrow-right.svg');
+      mask-image: url('../../../../assets/icons/arrow-right.svg');
       mask-repeat: no-repeat;
       mask-position: center;
 
@@ -33,7 +33,7 @@
   &__link {
     text-decoration: none;
     color: v.$color-primary;
-    
+
     @include m.flex;
   }
 }

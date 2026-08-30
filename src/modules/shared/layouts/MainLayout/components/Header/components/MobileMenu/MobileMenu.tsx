@@ -3,7 +3,8 @@ import styles from './MobileMenu.module.scss';
 import { NAV_LINKS } from './constants';
 import classNames from 'classnames';
 import { HeaderActions } from '../HeaderActions';
-import { getImageUrl } from '../../../../../../utils/getImageUrl';
+import logoIcon from '../../../../../../../../assets/icons/logo.png';
+import crossIcon from '../../../../../../../../assets/icons/cross.svg';
 
 const handleActiveLink = ({ isActive }: { isActive: boolean }) => {
   return classNames(styles['mobile-menu__link'], {
@@ -25,24 +26,14 @@ export const MobileMenu: React.FC<Props> = ({ onClose, isOpen }) => {
     >
       <div className={styles['mobile-menu__header']}>
         <Link to={'/'} className={styles['mobile-menu__logo']}>
-          <img
-            src={getImageUrl('/icons/logo.png')}
-            alt="Nice Device Logo"
-            width="64"
-            height="22"
-          />
+          <img src={logoIcon} alt="Nice Device Logo" width="64" height="22" />
         </Link>
 
         <button
           className={styles['mobile-menu__close-button']}
           onClick={onClose}
         >
-          <img
-            src={getImageUrl('/icons/cross.svg')}
-            alt="Close Menu"
-            width="10"
-            height="10"
-          />
+          <img src={crossIcon} alt="Close Menu" width="10" height="10" />
         </button>
       </div>
 

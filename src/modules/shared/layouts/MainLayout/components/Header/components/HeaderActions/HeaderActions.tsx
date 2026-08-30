@@ -3,7 +3,8 @@ import { NavLink, useLocation } from 'react-router-dom';
 import styles from './HeaderActions.module.scss';
 import { useCartState } from '../../../../../../store/CartContext';
 import { useFavorites } from '../../../../../../store/FavoritesContext';
-import { getImageUrl } from '../../../../../../utils/getImageUrl';
+import heartIcon from '../../../../../../../../assets/icons/heart.svg';
+import shoppingBagIcon from '../../../../../../../../assets/icons/shopping-bag.svg';
 
 const handleActiveLink = ({ isActive }: { isActive: boolean }) => {
   return classNames(styles['header-actions__link'], {
@@ -33,12 +34,7 @@ export const HeaderActions: React.FC<Props> = ({ className, onClose }) => {
           onClick={onClose}
         >
           <div className={styles['header-actions__wrapper']}>
-            <img
-              src={getImageUrl('/icons/heart.svg')}
-              alt="Favorites"
-              width="16"
-              height="14"
-            />
+            <img src={heartIcon} alt="Favorites" width="16" height="14" />
             {favoritesCount > 0 && (
               <span className={styles['header-actions__count']}>
                 {favoritesCount}
@@ -57,7 +53,7 @@ export const HeaderActions: React.FC<Props> = ({ className, onClose }) => {
           {' '}
           <div className={styles['header-actions__wrapper']}>
             <img
-              src={getImageUrl('/icons/shopping-bag.svg')}
+              src={shoppingBagIcon}
               alt="Shopping cart"
               width="16"
               height="16"

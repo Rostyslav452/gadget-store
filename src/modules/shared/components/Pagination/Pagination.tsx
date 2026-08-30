@@ -1,5 +1,6 @@
 import classNames from 'classnames';
-import { getImageUrl } from '../../utils/getImageUrl';
+import arrowLeftIcon from '../../../../assets/icons/arrow-left.svg';
+import arrowRightIcon from '../../../../assets/icons/arrow-right.svg';
 import { IconButton } from '../IconButton';
 import styles from './Pagination.module.scss';
 import { generatePagination } from './utils';
@@ -24,12 +25,7 @@ export const Pagination: React.FC<Props> = ({
         disabled={currentPage === 1}
         onClick={() => handleChangePage(currentPage - 1)}
       >
-        <img
-          src={getImageUrl('/icons/arrow-left.svg')}
-          alt="Previous"
-          width="6"
-          height="10"
-        />
+        <img src={arrowLeftIcon} alt="Previous" width="6" height="10" />
       </IconButton>
 
       <div className={styles.pagination__pages}>
@@ -58,12 +54,7 @@ export const Pagination: React.FC<Props> = ({
         disabled={currentPage === pageCount}
         onClick={() => handleChangePage(currentPage + 1)}
       >
-        <img
-          src={getImageUrl('/icons/arrow-right.svg')}
-          alt="Next"
-          width="6"
-          height="10"
-        />
+        <img src={arrowRightIcon} alt="Next" width="6" height="10" />
       </IconButton>
     </div>
   );

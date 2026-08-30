@@ -23,7 +23,7 @@ export const useItem = () => {
 
       try {
         const allProductsResponse = await fetch(
-          `${import.meta.env.BASE_URL}api/products.json`,
+          `${import.meta.env.BASE_URL}/api/products.json`,
         );
 
         if (!allProductsResponse.ok) {
