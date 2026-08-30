@@ -1,0 +1,24 @@
+@use '/src/modules/shared/styles/variables' as v;
+@use '/src/modules/shared/styles/mixins' as m;
+
+.layout {
+  background-color: v.$color-gray;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--header-height));
+
+  --header-height: 48px;
+
+  @include m.respond-to(desktop) {
+    --header-height: 64px;
+  }
+}
