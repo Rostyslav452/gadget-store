@@ -39,9 +39,7 @@ export const Pagination: React.FC<Props> = ({
               aria-label={`To ${page} page`}
               key={page}
               onClick={() => handleChangePage(+page)}
-              className={classNames({
-                [styles['pagination__button-active']]: currentPage == page,
-              })}
+              selected={currentPage === page}
             >
               {page}
             </IconButton>

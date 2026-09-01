@@ -95,7 +95,7 @@ export const CatalogPage = () => {
       </div>
 
       <div className={styles['catalog-page__product-list']}>
-        {preparedProducts.length !== 0 ? (
+        {preparedProducts.length > 0 ? (
           <ProductList products={preparedProducts} />
         ) : (
           <div className={styles['catalog-page__not-found']}>

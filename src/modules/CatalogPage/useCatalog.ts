@@ -67,7 +67,7 @@ export const useCatalog = () => {
     setSearchParams(newParams);
   }
 
-  const sortParam = searchParams.get('sort') || '';
+  const sortParam = searchParams.get('sort') || 'Newest';
   const currentSort: SortOption | '' = isSortOption(sortParam) ? sortParam : '';
 
   const paginationParam = searchParams.get('pagination') || '';

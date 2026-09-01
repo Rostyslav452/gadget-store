@@ -3,6 +3,11 @@
 @use '/src/modules/shared/styles/typography' as t;
 
 .catalog-page {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
   padding-block: 24px 64px;
 
   @include m.respond-to(desktop) {
@@ -58,10 +63,11 @@
   }
 
   &__pagination {
-    margin-top: 24px;
+    margin-top: auto;
+    padding-top: 24px;
 
     @include m.respond-to(tablet) {
-      margin-top: 40px;
+      padding-top: 40px;
     }
   }
 
