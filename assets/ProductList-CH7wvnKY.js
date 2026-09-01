@@ -1,0 +1,1 @@
+import{j as t}from"./index-DTFxKG25.js";import{a as o}from"./ProductCard-Dr-MShuF.js";const i={"product-list":"_product-list_l5aa2_1","product-list__item":"_product-list__item_l5aa2_6"},d=({products:r})=>t.jsx("div",{className:i["product-list"],children:r.map(s=>t.jsx("div",{className:i["product-list__item"],children:t.jsx(o,{product:s})},s.itemId))});export{d as P};
