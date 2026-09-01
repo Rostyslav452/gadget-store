@@ -5,9 +5,8 @@ export const parseProductDetailsToProduct = (
   product: ProductDetails,
 ): Product => {
   return {
-    id: Number(product.id),
     category: product.category,
-    itemId: product.namespaceId,
+    itemId: product.id,
     name: product.name,
     capacity: product.capacity,
     price: product.priceDiscount,

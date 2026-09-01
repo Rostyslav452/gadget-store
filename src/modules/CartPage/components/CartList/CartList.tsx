@@ -10,7 +10,7 @@ export const CartList: React.FC<Props> = ({ cartItems }) => {
   return (
     <ul className={styles['cart-list']}>
       {cartItems.map(item => (
-        <CartCard item={item} key={item.product.itemId} />
+        <CartCard item={item} key={item.product.id} />
       ))}
     </ul>
   );

@@ -22,7 +22,7 @@ export const HeaderActions: React.FC<Props> = ({ className, onClose }) => {
   const state = useCartState();
   const { favorites } = useFavorites();
   const favoritesCount = favorites.length;
-  const cartCount = state.cartItems.length;
+  const cartCount = state.cartItems.reduce((acc, cur) => acc + cur.quantity, 0);
 
   return (
     <ul className={classNames(styles['header-actions'], className)}>

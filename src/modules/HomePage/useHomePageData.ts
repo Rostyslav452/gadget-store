@@ -62,10 +62,15 @@ export const useHomePageData = () => {
     fetchProducts();
   }, []);
 
-  const newProducts: Product[] = useMemo(() => {
+  const newProducts: Omit<Product, 'fullPrice'>[] = useMemo(() => {
     return products
       .toSorted((a: Product, b: Product) => b.year - a.year)
-      .slice(0, 10);
+      .slice(0, 10)
+      .map(product => {
+        const { fullPrice, ...parsed } = product;
+
+        return parsed;
+      });
   }, [products]);
 
   const productsOnSale: Product[] = useMemo(() => {

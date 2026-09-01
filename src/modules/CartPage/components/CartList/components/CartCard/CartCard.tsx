@@ -45,7 +45,12 @@ export const CartCard: React.FC<Props> = ({ item }) => {
           }
           disabled={item.quantity === 1}
         >
-          <img src={minusIcon} alt={'decrease quantity'} width="11" height="2" />
+          <img
+            src={minusIcon}
+            alt={'decrease quantity'}
+            width="11"
+            height="2"
+          />
         </IconButton>
 
         <span>{item.quantity}</span>
@@ -56,7 +61,12 @@ export const CartCard: React.FC<Props> = ({ item }) => {
             dispatch({ type: 'incrementQuantity', productId: itemId })
           }
         >
-          <img src={plusIcon} alt={'increase quantity'} width="11" height="11" />
+          <img
+            src={plusIcon}
+            alt={'increase quantity'}
+            width="11"
+            height="11"
+          />
         </IconButton>
       </div>
 

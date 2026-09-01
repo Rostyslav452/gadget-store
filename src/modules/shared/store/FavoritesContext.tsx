@@ -14,7 +14,6 @@ interface Favorite {
 }
 
 function getInitialState() {
-  localStorage.removeItem('favorites');
   const localData = localStorage.getItem('favorites');
 
   return localData ? JSON.parse(localData) : [];

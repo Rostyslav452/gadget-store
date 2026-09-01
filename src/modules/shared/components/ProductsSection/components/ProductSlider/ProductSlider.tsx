@@ -14,7 +14,7 @@ export const ProductSlider: React.FC<Props> = ({ products, emblaRef }) => {
         <ul className={styles.carousel__collection}>
           {products.length > 0 ? (
             products.map(product => (
-              <li className={styles.carousel__item} key={product.id}>
+              <li className={styles.carousel__item} key={product.itemId}>
                 <ProductCard product={product} />
               </li>
             ))

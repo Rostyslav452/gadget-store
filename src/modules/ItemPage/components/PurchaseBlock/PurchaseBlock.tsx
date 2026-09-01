@@ -32,6 +32,7 @@ export const PurchaseBlock: React.FC<Props> = ({
   const isProductInCart = state.cartItems.some(
     item => item.product.itemId === parsedProduct.itemId,
   );
+  console.log(parsedProduct.itemId);
 
   return (
     <div className={styles['purchase-block']}>

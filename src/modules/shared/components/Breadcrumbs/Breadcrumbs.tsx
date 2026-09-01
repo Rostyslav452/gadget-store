@@ -19,10 +19,12 @@ export const Breadcrumbs: React.FC<Props> = ({ links }) => {
 
         {links.map((link, index) => {
           const isLast = index === links.length - 1;
-          const label = link.label[0].toUpperCase() + link.label.slice(1);
+          const label = link.label
+            ? link.label.charAt(0).toUpperCase() + link.label.slice(1)
+            : '';
 
           return (
-            <li className={styles.breadcrumbs__item} key={link.to}>
+            <li className={styles.breadcrumbs__item} key={label}>
               {!isLast && link.to ? (
                 <Link to={link.to} className={styles.breadcrumbs__link}>
                   {label}
